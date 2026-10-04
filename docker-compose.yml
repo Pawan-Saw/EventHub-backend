@@ -52,19 +52,5 @@ services:
       - "8080:8080"
 
 
-  frontend:
-    build:
-      context: ../eventhub-frontend
-
-    container_name: eventhub-frontend
-    restart: unless-stopped
-
-    depends_on:
-      - backend
-
-    ports:
-      - "3000:80"
-
-
 volumes:
   mysql_data:
